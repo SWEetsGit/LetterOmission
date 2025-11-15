@@ -1,0 +1,33 @@
+{
+  "mainPrompt": {
+    "starterPrompt": "I want to write a full-length novel based on the following idea: {}",
+    "mainGeneration": {
+      "constantText": "Continue this story exactly where it left off. Do not summarize or restart. Avoid repeating earlier parts of the story. Focus only on new developments.",
+      "chapterText": "Base the story on the following sentence: {}",
+      "additionalPrompting": "Make sure to keep point of view (first, second, or third) consistent throughout the whole generation. Keep characters consistent with any existing story that you are given. Do not add new characters unless absolutely necessary. Make sure linking verbs (such as is and are) are used when needed.",
+      "continuationTextTrue": "Here is the first part of the story: {}",
+      "englishPrompt": "Please speak in normal English, only using real words. Ensure the story continues naturally and does not repeat the same phrase or description. Avoid using invented or non-existent words (i.e. words that rarely appear in training data). If no suitable synonym exists, rephrase the thought naturally using other words.  Do not use too many symbol characters in a generation.  Only use English letters, words, and punctuation. Even though some letters are missing, ensure your sentences remain grammatical. Always include linking verbs like is, was, are, and were where appropriate and if possible. Write clearly and naturally, even if word choice feels limited.",
+      "backgroundPrompt": "Here are the characters that are in this story: {} Here is the setting of this story: {} Here is the tone of this story: {}"
+    },
+    "chunkGeneration": {
+      "generalPromptOld": "{} Create a list of {} one-sentence story beats that together outline the entire novel from beginning to end. Each sentence should be broad enough to represent about {} words of story, meaning each one covers many scenes or major developments, not just a single moment. The {} sentences should form a complete, coherent story arc, introduce and evolve characters, conflicts, and themes logically, maintain consistent tone and style, and flow naturally from one sentence to the next. Each sentence should be numbered. Each sentence should be no longer than 30 words. There should be exactly {} sentences in this generation.",
+      "generalPrompt": "{} Create a one-sentence story beat {}. This sentence should be broad enough to represent about {} words, meaning it covers many scenes or major developments, not just a single moment. The sentence should form a complete, coherent story arc, introduce and evolve characters, conflicts, and themes logically, maintain consistent tone and style, and flow naturally from the previous sentences given.  This sentence should be no more than 30 words. Do not repeat any of the input you were given.",
+      "noRepeat": "Do not repeat any of the character, setting, or tone descriptions. Focus only on new developments that advance the story."
+    }
+  },
+  "characters": {
+    "characterLength": "This generation should be no longer than 200 words.",
+    "characterPrompt": "{} Create a list of characters that fit this story, including demographic information, personality traits, and how they physically look.",
+    "characterAdd": "Every generated sentence should describe exactly one character.  Each character should only have one sentence describing them.  There should be an equal number of sentences as there are characters. Each sentence should list the character’s name, two to three pieces of demographic information, and two to three pieces of information that describe their personality.  The character should be described in this order and there should be no additional filler or unnecessary numbering of the demographic or personality traits. Do not make them optional choices to choose from.  Instead, each character must have a specific role that makes them integral to the story. An individual character description should take up no more than 35 words."
+  },
+  "setting": {
+    "settingLength": "This generation should contain no more than 40 words.",
+    "settingPrompt": "{} Create the general setting for this story, including the year (or range of years) and location.",
+    "settingAdd": "The generated output should contain exactly two sentences.  The first sentence should describe the time period in which the story takes place.  The second sentence should describe the general location or locations that the story takes place.  For example, if the story is about a man traveling to every country, the setting will be the world. Do not add any filler context. Do not give a list of possible settings.  Only generate one setting that the story takes place in."
+  },
+  "tone": {
+    "toneLength": "This generation should be no longer than 80 words.",
+    "tonePrompt": "{} Generate the tone that this story should follow, which should dictate the emotional and intellectual stance of the story.",
+    "toneAdd": "Directly answer this prompt by outlining the type of word choice, sentence structure, and style of writing. Do not add any filler context.  Do not generate different options for the tone.  Only generate one style of tone."
+  }
+}
